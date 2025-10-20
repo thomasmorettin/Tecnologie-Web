@@ -1,4 +1,6 @@
 # [Titolo sito web]
+## Link alle risorse
+**Relazione tecnica** → https://typst.app/project/rFdbj6bOesPogDGePyxrHw
 ## AA25/26 - Progetto del corso **Tecnologie Web** [SCP4065581]
 Il seguente progetto è un lavoro realizzato in gruppo per il conseguimento del 75% della valutazione al corso sopracitato.
 
