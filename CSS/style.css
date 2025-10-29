@@ -9,7 +9,7 @@
     --bgbread: #F2ECDB;
     --onhovercolor: #F2ECDB;
     --bgsection: #FAE9E8;
-    --btnhovercolor: #C8D5B9;
+    --btnhovercolor: #B4C0A7;
     --btncolor: #C8D5B9;
     --bgheader: #F2ECDB;
 }
@@ -21,7 +21,7 @@ html, body {
 }
 
 html {
-    background-image: url("Resources/Vectors/Paws.svg");
+    background-image: url("../Resources/Vectors/Paws.svg");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -37,7 +37,7 @@ body {
 
 header {
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
     position: sticky;
     top: 1em;
@@ -45,7 +45,7 @@ header {
     padding: 0.75em 0.5em 0.75em 0.5em; /* top, right, bottom, left */
     box-shadow: none;
     background-color: var(--bgcolor);
-    transition: box-shadow 0.5s ease;
+    transition: box-shadow 0.3s ease;
 }
 
 header.scrolled {
@@ -53,7 +53,7 @@ header.scrolled {
 }
 
 header h1 {
-    background-image: url("Resources/Vectors/Logo.svg");
+    background-image: url("../Resources/Vectors/Logo.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -96,8 +96,28 @@ header h1 {
     justify-self: end;
 }
 
+#hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+    justify-self: end;
+    display: none;
+}
+
+#hamburger .linea {
+    display: block;
+    width: 1.5em;
+    height: 0.2em;
+    background-color: var(--txtcolor);
+    transition: all 0.3s ease;
+}
+
 #btn-access {
-    background-image: url("Resources/Vectors/Access.svg");
+    background-image: url("../Resources/Vectors/Access.svg");
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: center;
@@ -105,7 +125,7 @@ header h1 {
     border: none;
     width: 3em;
     height: 3em;
-    border-radius: 2em;
+    border-radius: 1em;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -115,10 +135,10 @@ header h1 {
 }
 
 #btn-login {
-    content: url("Resources/Vectors/Login.svg");
+    content: url("../Resources/Vectors/Login.svg");
     width: 2.25em;
     padding: 0.5em;
-    border-radius: 2em;
+    border-radius: 1em;
     transition: background-color 0.3s ease;
 }
 
@@ -150,21 +170,22 @@ main {
 }
 
 #section-title {
-    margin: auto;
-    padding: 7.5em;
+    margin: 7.5em auto;
     text-align: center;
 }
 
 #section-title h1 {
     font-size: 3em;
+    line-height: 1.25em;
 }
 
 #section-title p {
     margin: 1em;
     font-size: 1.6em;
+    line-height: 1em;
 }
 
-#section-title ul {
+#section-title menu {
     margin: 2em auto;
     width: fit-content;
     display: flex;
@@ -194,11 +215,10 @@ main {
     background-color: var(--bgsection);
 }
 
-#descrizione {
-    display: grid;
-    grid-template-columns: auto 1fr;
+#section-chi-siamo>div {
+    display: flex;
     align-items: center;
-    gap: 0.5em;
+    gap: 1em;
 }
 
 #section-chi-siamo h2 {
@@ -207,20 +227,46 @@ main {
     text-align: center;
 }
 
+#section-title p {
+    line-height: 1.25em;
+}
+
 #img-volontari {
-    content: url("Resources/Images/ImgChiSiamo.jpg");
+    content: url("../Resources/Images/ImgChiSiamo.jpg");
     width: 25em;
-    justify-self: end;
     border-radius: 40% 52% 48% 14% / 41% 31% 61% 27%;
 }
 
-#section-dati {
-    margin: auto;
-    padding: 7.5em;
-    text-align: center;
+#btn-back-to-top {
+    background-image: url("../Resources/Vectors/UpArrow.svg");
+    background-size: 2em;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 2.75em;
+    height: 2.75em;
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    z-index: 2;
+    background-color: var(--btncolor);
+    color: var(--txtcolor);
+    border: none;
+    cursor: pointer;
+    border-radius: 1em;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: "Inter", serif;
+    transition: background-color 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
 }
 
-#section-dati h2 {
-    font-size: 2.25em;
-    text-align: center;
+#btn-back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+#btn-back-to-top:hover {
+    background-color: var(--btnhovercolor);
 }

@@ -8,8 +8,10 @@
     <meta name="keywords" content="...">
 
     <link id="title-icon" rel="icon">
-    <link rel="stylesheet" href="CSS/style.css">
-    <script src="JavaScript/script.js" defer></script>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/style-smartphone.css" media="screen and (max-width: 800px)">
+
+    <script src="../JavaScript/script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -28,9 +30,15 @@
         </nav>
 
         <menu id="header-btns">
-            <button id="btn-access"></button>
-            <a id="btn-login" href="#">Login</a>
+            <button id="btn-access" title="Accessibilità"></button>
+            <a id="btn-login" href="#" lang="en">Login</a>
         </menu>
+
+        <button id="hamburger">
+            <span class="linea"></span>
+            <span class="linea"></span>
+            <span class="linea"></span>
+        </button>
     </header>
 
     <nav id="breadcrumb">
@@ -41,10 +49,11 @@
         <section id="section-title">
             <h1>Rifugio Amici per Sempre</h1>
             <p>Adottali o portali in adozione, ma <em>non lasciarli mai soli</em>.</p>
-            <ul>
-                <li><a href="#">Adotta un amico</a></li>
-                <li><a href="#">Porta in adozione</a></li>
-            </ul>
+
+            <menu>
+                <a href="#">Adotta un amico</a>
+                <a href="#">Porta in adozione</a>
+            </menu>
         </section>
 
         <section id="section-chi-siamo">
@@ -55,9 +64,7 @@
                 <div id="img-volontari"></div>
             </div>
         </section>
-
-        <section id="section-dati">
-            <h2>I nostri dati</h2>
-        </section>
     </main>
+
+    <button onclick="backToTop()" id="btn-back-to-top" title="Torna in cima"></button>
 </body>

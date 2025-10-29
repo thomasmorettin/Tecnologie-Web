@@ -1,0 +1,49 @@
+#hamburger {
+    display: flex;
+}
+
+#menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    transform: translateY(-1em);
+    opacity: 0;
+    visibility: hidden;
+    transition: right 0.5s ease;
+}
+
+#header-btns {
+    display: none;
+}
+
+#menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+#hamburger.active .linea:nth-child(1) {
+    transform: translateY(0.5em) rotate(45deg);
+}
+
+#hamburger.active .linea:nth-child(2) {
+    opacity: 0;
+}
+
+#hamburger.active .linea:nth-child(3) {
+    transform: translateY(-0.45em) rotate(-45deg);
+}
+
+#section-title {
+    margin: 4.5em auto;
+}
+
+#section-chi-siamo>div {
+    flex-direction: column;
+}
+
+#img-volontari {
+    margin-top: 1em;
+}
