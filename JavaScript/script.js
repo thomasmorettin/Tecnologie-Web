@@ -1,9 +1,12 @@
 function updateTitleIcon() {
   const icnTitle = document.getElementById("title-icon");
+  const appleIcnTitle = document.getElementById("apple-title-icon");
   if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
     icnTitle.href = "../Resources/Vectors/LogoRidotto_Light.svg";
+    appleIcnTitle.href = "../Resources/Vectors/LogoRidotto_Light.svg";
   } else {
     icnTitle.href = "../Resources/Vectors/LogoRidotto.svg";
+    appleIcnTitle.href = "../Resources/Vectors/LogoRidotto.svg";
   }
 }
 
