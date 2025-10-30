@@ -1,5 +1,10 @@
+function loadPage() {
+  document.querySelector("header").classList.remove("scrolled");
+  document.getElementById("btn-back-to-top").classList.remove("visible");
+}
+
 function updateTitleIcon() {
-  const icnTitle = document.getElementById("title-icon");
+  const icnTitle = document.getElementsByClassName("title-icon")
   if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
     icnTitle.href = "../Resources/Vectors/LogoRidotto_Light.svg";
   } else {
@@ -46,6 +51,8 @@ function btnHamburgerClick() {
     hamburger.classList.toggle("active");
   })
 }
+
+loadPage();   // Funzione per modificare pagina al login. Se JavaScript non attivo, vengono mantenuti gli elementi del file HTML
 
 updateTitleIcon();    // Avvio della pagina web
 window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", updateTitleIcon);    // Aggiornamento automatico
