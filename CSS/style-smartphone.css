@@ -47,3 +47,7 @@
 #img-volontari {
     margin-top: 1em;
 }
+
+#section-contatti iframe {
+    display: none;
+}

@@ -45,6 +45,7 @@ header {
     padding: 0.75em 0.5em 0.75em 0.5em; /* top, right, bottom, left */
     box-shadow: none;
     background-color: var(--bgcolor);
+    z-index: 999;
     transition: box-shadow 0.3s ease;
 }
 
@@ -209,7 +210,6 @@ main {
 }
 
 #section-chi-siamo {
-    margin-bottom: 3em;
     padding: 2em;
     border-radius: 0.5em;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -222,9 +222,39 @@ main {
     gap: 1em;
 }
 
-#section-chi-siamo h2 {
+#section-chi-siamo h2,
+#section-dati h2 {
     margin-bottom: 1em;
     font-size: 2.25em;
+    text-align: center;
+}
+
+#section-dati {
+    margin: 7.5em auto;
+}
+
+#section-dati ul {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    text-align: center;
+    list-style: none;
+    gap: 2em;
+}
+
+#section-dati ul li {
+    flex: auto;
+    text-align: center;
+    padding: 0.75em;
+    border-radius: 0.5em;
+    background-color: var(--bgsection);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+#section-dati ul li dl dd {
+    margin-top: 0.25em;
+    font-weight: bold;
+    font-size: 2em;
     text-align: center;
 }
 
@@ -236,6 +266,39 @@ main {
     content: url("../Resources/Images/ImgChiSiamo.jpg");
     width: 25em;
     border-radius: 40% 52% 48% 14% / 41% 31% 61% 27%;
+}
+
+#descrizione-foto {
+    display: flex;
+}
+
+#descrizione blockquote {
+    font-size: 1.25em;
+    padding: 1em;
+    position: relative;
+    text-align: center;
+    width: 20em;
+    margin: 1em auto;
+    margin-bottom: 0;
+    font-style: italic;
+}
+
+#descrizione blockquote::before {
+    content: url("../Resources/Vectors/UpQuote.svg");
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+    top: 0;
+    left: 0;
+}
+
+#descrizione blockquote::after {
+    content: url("../Resources/Vectors/DownQuote.svg");
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+    bottom: 0;
+    right: 2em;
 }
 
 #btn-back-to-top {
@@ -252,6 +315,7 @@ main {
     background-color: var(--btncolor);
     color: var(--txtcolor);
     border: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     cursor: pointer;
     border-radius: 1em;
     font-size: 1em;
@@ -272,7 +336,17 @@ main {
     background-color: var(--btnhovercolor);
 }
 
+#section-contatti a {
+    color: var(--txtcolor);
+    text-decoration: none;
+}
+
+#section-contatti a:hover {
+    text-decoration: underline;
+}
+
 #section-contatti {
+    margin: 7.5em auto;
     display: flex;
     justify-content: center;
     gap: 7em;
@@ -282,7 +356,7 @@ main {
     font-weight: bold;
 }
 
-#section-contatti dd {
+#section-contatti dd:not(:last-child) {
     margin-bottom: 1em;
 }
 
@@ -292,20 +366,21 @@ main {
     text-align: center;
 }
 
-#section-contatti iframe {
+#google-maps {
     border: 1px solid var(--bgsection);
     border-radius: 1em;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    float: right;
     width: 20em;
     height: 20em;
 }
 
-#section-contatti ul {
-    list-style: none;
+#socials-centered {
+    text-align: center;
 }
 
 #socials {
+    list-style: none;
+    justify-content: center;
     display: flex;
     gap: 1em;
 }
@@ -315,9 +390,7 @@ main {
 }
 
 footer {
-    top: 1em;
     border-radius: 0.5em;
-    margin-top: 3em;
     padding: 0.75em 0.5em 0.75em 0.5em; /* top, right, bottom, left */
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     background-color: var(--bgcolor);
