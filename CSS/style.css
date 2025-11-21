@@ -186,7 +186,7 @@ main {
     line-height: 1em;
 }
 
-#section-title menu {
+#section-title ul {
     margin: 2em auto;
     width: fit-content;
     display: flex;
@@ -200,6 +200,7 @@ main {
     font-weight: bold;
     background-color: var(--btncolor);
     transition: background-color 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     font-size: 1.1em;
     border-radius: 0.5em;
     padding: 0.5em 1em 0.5em 1em; /* top, right, bottom, left */
@@ -395,4 +396,70 @@ footer {
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     background-color: var(--bgcolor);
     text-align: center;
+    margin-top: 1em;
+}
+
+.titolo {
+    font-size: 3em;
+    font-weight: bold;
+    line-height: 1.25em;
+    text-align: center;
+    margin: 1em;
+}
+
+.giornata {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+.info {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 0.5em;
+    border-radius: 0.5em;
+    width: 100%;
+}
+
+.linea {
+    content: "";
+    display: inline-block;
+    border-radius: 0.25em;
+    width: 0.25em;
+    height: auto;
+    vertical-align: middle;
+}
+
+.orario {
+    margin: 0.5em;
+    vertical-align: middle;
+    display: inline-block;
+    height: auto;
+    align-self: center;
+    font-weight: bold;
+}
+
+.cnt-adozione {
+    display: flex;
+    margin: 0.5em auto;
+}
+
+.cnt-adozione .info {
+    background-color: rgba(180, 192, 167, 0.5);
+}
+
+.cnt-adozione .linea {
+    background-color: var(--btnhovercolor);
+}
+
+.cnt-presa-adozione {
+    display: flex;
+    margin: 0.5em auto;
+}
+
+.cnt-presa-adozione .info {
+    background-color: rgba(250, 233, 232, 0.75);
+}
+
+.cnt-presa-adozione .linea {
+    background-color: var(--bgsection);
 }
